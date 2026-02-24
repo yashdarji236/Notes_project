@@ -9,6 +9,8 @@ app.use(cors());
 //api
 
 //Post
+
+app.post()
 app.post('/api/notes',async function(req,res){
     
 const {title,description} = req.body
