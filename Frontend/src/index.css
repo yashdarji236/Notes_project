@@ -1,0 +1,295 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body,#root{
+  height:100%;
+  width:100%;
+}
+html{
+  background-color: rgb(24, 24, 24);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.notes{
+  display: flex;
+  gap:1rem;
+  flex-wrap: wrap;
+  padding:1rem;
+}
+.note{
+  background: rgb(107, 107, 107);
+  padding: 1rem;
+  border-radius: 0.7rem;
+  max-width: 20rem;
+  color:white;
+  height:fit-content
+}
+.all-Notes{
+  display: flex;
+  flex-wrap: wrap;
+  height:100%;
+  width:70%;
+  border:2px solid white;
+  overflow: auto;
+  background-color: #7BAA28;
+}
+.note-create-form{
+  display:flex;
+  gap:1rem;
+  padding:3rem;
+  height:100%;
+  width:30%;
+  flex-direction: column;
+  border:2px solid white;
+   justify-content: center;
+}
+.note-create-form input{
+  padding:5px;
+}
+.note-create-form button{
+  padding: 5px;
+  cursor: pointer;
+}
+.note-create-form h2{
+  color:white;
+  font-family: cursive;
+}
+.parent{
+  height:100%;
+  width:100%;
+  display: flex;
+  gap:0.5rem;
+  background-color: #138466;
+}
+.notes button{
+  padding:5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  cursor:pointer;
+}
+.delete{
+  background-color: crimson;
+  color:white;
+  border:none;
+}
+.update{
+   background-color: royalblue;
+  color:white;
+  border:none;
+}
+.hero {
+  width: 100vw;
+  height: 100vh;
+  /* prevent scrollbars */
+}
+
+.hero{
+  position: relative;
+}
+
+.hero .img {
+  width: 100%;
+  height: 100%;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 2rem;
+  z-index: 10;
+  background: rgba(0,0,0,0.25);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills screen properly */
+  display: block;
+}
+.right {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  /* background-color: red; */
+}
+.right h1 {
+  font-size: 52px;
+  color: #004d40;
+  margin-bottom: 20px;
+}
+
+.right p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.buy-btn {
+  padding: 14px 30px;
+  background-color: #2e7d32;
+  border: none;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.show-btn {
+  padding: 14px 30px;
+  background: none;
+  border: none;
+  color: #2e7d32;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.buy-btn:hover {
+  background-color: #1b5e20;
+}
+.intro-screen {
+  width: 100vw;
+  height: 100vh;
+  background-color: crimson;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  overflow: hidden;
+}
+
+/* Text Animation */
+.intro-text {
+  font-size: 70px;
+  color: white;
+  opacity: 0;
+  font-family: cursive;
+  animation: textFade 2s ease forwards;
+}
+
+/* Image Animation */
+.intro-img {
+  width: 300px;
+  opacity: 0;
+  animation: imgFade 2s ease forwards;
+}
+
+.intro-img.left {
+  animation-delay: 0.5s;
+}
+
+.intro-img.right {
+  animation-delay: 1s;
+  margin-top: 3rem;
+}
+.all-about{
+  height: 100vh;
+  width:100vw;
+  background-color: #3C3C3C;
+  display: flex;
+  align-items: center;
+   
+}
+.div-left{
+  height:90vh;
+  width:50vw;
+  overflow: hidden;
+  padding:1rem;
+}
+.div-left img{
+    height:100%;
+    width:100%;
+    transition: all ease-in-out;
+}
+.div-left img:hover{
+  transform: scale(1.1);
+}
+.div-right{
+   height:90vh;
+  width:50vw;
+  padding:1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: rgb(55, 0, 255); */
+}
+.right-inner{
+  display: flex;
+  gap:2rem;
+  flex-direction: column;
+align-items: center;
+text-align: center;
+  /* background-color: rgb(13, 255, 0); */
+  margin-top: 4rem;
+  height:60%;
+  font-size: 1.5rem;
+  color:rgb(218, 218, 218);
+ 
+}
+.abtn-div{
+  padding:1rem;
+  /* background-color: red; */
+  display: flex;
+  gap:1rem;
+  width:100%;
+  align-items: center;
+  justify-content: center;
+}
+.abtn-div button{
+  padding:10px;
+  width:20%;
+}
+@keyframes textFade {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes imgFade {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+.parent{
+  flex-direction: column;
+}
+.note-create-form{
+   width:100%;
+}
+.all-Notes{
+  width:100%;
+}
+}
